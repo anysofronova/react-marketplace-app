@@ -1,0 +1,41 @@
+.product__edit {
+  border: 1.5px solid #333;
+  *::-webkit-input-placeholder {
+    color: #333;
+  }
+  * {
+    height: 30px;
+    padding: 0.2rem 0.4rem;
+    border: none;
+    border-bottom: 1px solid #333;
+    outline: none;
+    border-collapse: collapse;
+    color: #333;
+  }
+  .product__name {
+    border-right: 1px solid #333;
+  }
+  .product__name,
+  .product__price {
+    width: 50%;
+  }
+  textarea,
+  select,
+  .product__image,
+  button {
+    width: 100%;
+    resize: none;
+  }
+  textarea {
+    height: 50px;
+  }
+  button {
+    cursor: pointer;
+    background-color: rgb(218, 211, 211);
+    border: none;
+    &:hover {
+      background-color: rgb(87, 85, 85);
+      color: #fff;
+    }
+  }
+}
