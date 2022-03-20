@@ -1,0 +1,58 @@
+.marketplase__select {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  top: 20%;
+  padding-top: 10%;
+  .marketplase__select-top {
+    cursor: pointer;
+    display: flex;
+    .marketplase__select-top-header {
+      margin-right: 7px;
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+  .marketplase__select-bottom {
+    ul {
+      li {
+        list-style: none;
+        margin: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+  button {
+    position: relative;
+    top: 100%;
+    cursor: pointer;
+    width: 200px;
+    height: 40px;
+    border: 1px solid #333;
+    transition: all 0.35s;
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: #333;
+      transition: all 0.35s;
+    }
+    &:hover {
+      color: #fff;
+    }
+    &:hover::after {
+      width: 100%;
+    }
+    span {
+      position: relative;
+      z-index: 2;
+    }
+  }
+}

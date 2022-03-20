@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto:wght@300;500&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+.store__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 5%;
+  gap: 5%;
+}
