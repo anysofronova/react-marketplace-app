@@ -1,9 +1,8 @@
 import React from "react";
 import stores from "../sample-stores";
-import "./Landing.scss";
+import "./scss/Landing.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-// import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 class Landing extends React.Component {
