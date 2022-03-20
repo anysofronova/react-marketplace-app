@@ -1,5 +1,7 @@
 import React from "react";
 import Header from "./Header";
+import Order from "./Order";
+import ProductAdmin from "./ProductAdmin";
 
 function Home() {
   return (
@@ -7,8 +9,12 @@ function Home() {
       <div className="store__header">
         <Header title="Anna Sofronova" subTitle="From Russia with Love" />
       </div>
-      <div className="store__order">{/* <Order /> */}</div>
-      <div className="store__ProductAdmin">{/* <ProductAdmin /> */}</div>
+      <div className="store__order">
+        <Order />
+      </div>
+      <div className="store__ProductAdmin">
+        <ProductAdmin />
+      </div>
     </div>
   );
 }
