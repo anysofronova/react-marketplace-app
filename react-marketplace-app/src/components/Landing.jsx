@@ -21,13 +21,6 @@ class Landing extends React.Component {
     this.setState({ title, url, display: false });
   };
 
-  goToStore = () => {
-    const { url } = this.state;
-    // let navigate = useNavigate();
-    console.log(`/store/${url}`);
-    // navigate(`/store/${url}`);
-  };
-
   render() {
     return (
       <div className="marketplase__select">
