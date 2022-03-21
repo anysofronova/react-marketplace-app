@@ -3,8 +3,8 @@ import "./scss/Product.scss";
 
 function Product(props) {
   const { image, name, desc, price, status } = props.details;
-  const isAvailable = status === "availible";
-  console.log(isAvailable);
+  const isAvailable = status === "available";
+
   return (
     <li className="product">
       <div className="product__img-container">
@@ -14,7 +14,13 @@ function Product(props) {
         <h3 className="product__name">{name}</h3>
         <h4 className="product__price">{price} $</h4>
         <p className="product__desc">{desc}</p>
-        <button className="product__button" disabled={!isAvailable}>
+        <button
+          className="product__button"
+          disabled={!isAvailable}
+          onClick={() => {
+            props.addToOrder(props.index);
+          }}
+        >
           {isAvailable ? "Add to Card" : "Out of Stock"}
         </button>
       </div>
