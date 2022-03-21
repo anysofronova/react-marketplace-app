@@ -1,5 +1,6 @@
 import React from "react";
 import "./scss/Order.scss";
+import Shipment from "./Shipment";
 
 function Order(props) {
   const renderOrder = (key) => {
@@ -39,7 +40,11 @@ function Order(props) {
     <header className="order">
       <h2 className="order__title">Your order:</h2>
       <ul className="order__list">{orderIds.map(renderOrder)}</ul>
-      <div className="order__total">Total: {total}$</div>
+      {total > 0 ? (
+        <Shipment total={total} />
+      ) : (
+        <div className="order__empty">Your Cart is empty.</div>
+      )}
     </header>
   );
 }

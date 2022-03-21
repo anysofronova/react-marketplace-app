@@ -38,10 +38,7 @@
       }
     }
   }
-  .order__total {
-    border-top: 2px solid #333;
-    padding: 2rem 1rem;
-    font-weight: 500;
-    text-align: end;
+  .order__empty {
+    text-align: center;
   }
 }
