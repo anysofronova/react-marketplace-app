@@ -3,6 +3,7 @@ import Header from "./Header";
 import Order from "./Order";
 import ProductAdmin from "./ProductAdmin";
 import sampleProducts from "../sample-products";
+import Product from "./Product";
 
 class Home extends React.Component {
   state = {
@@ -25,6 +26,17 @@ class Home extends React.Component {
       <div className="store__container">
         <div className="store__header">
           <Header title="Anna Sofronova" subTitle="From Russia with Love" />
+          <ul className="pruducts">
+            {Object.keys(this.state.products).map((key) => {
+              return (
+                <Product
+                  key={key}
+                  index={key}
+                  details={this.state.products[key]}
+                />
+              );
+            })}
+          </ul>
         </div>
         <div className="store__order">
           <Order />
