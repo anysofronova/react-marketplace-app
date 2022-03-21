@@ -8,6 +8,7 @@ function ProductAdmin(props) {
       <div className="productAdmin__wrap">
         <h2>Prodact Admin:</h2>
         <AddProductForm addProduct={props.addProduct} />
+        <button onClick={props.loadSampleProduct}>Upload</button>
       </div>
     </header>
   );

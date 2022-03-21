@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Order from "./Order";
 import ProductAdmin from "./ProductAdmin";
+import sampleProducts from "../sample-products";
 
 class Home extends React.Component {
   state = {
@@ -15,6 +16,10 @@ class Home extends React.Component {
     this.setState({ products });
   };
 
+  loadSampleProduct = () => {
+    this.setState({ products: sampleProducts });
+  };
+
   render() {
     return (
       <div className="store__container">
@@ -25,7 +30,10 @@ class Home extends React.Component {
           <Order />
         </div>
         <div className="store__ProductAdmin">
-          <ProductAdmin addProduct={this.addProduct} />
+          <ProductAdmin
+            addProduct={this.addProduct}
+            loadSampleProduct={this.loadSampleProduct}
+          />
         </div>
       </div>
     );
