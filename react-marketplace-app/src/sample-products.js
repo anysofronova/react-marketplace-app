@@ -11,7 +11,7 @@ const sampleProducts = {
     image: require("../src/img/product2.jpeg"),
     desc: "Illicit Flower is created for a graceful woman, unafraid to toy with the rules.",
     price: 59.99,
-    status: "availible",
+    status: "unavailable",
   },
   product3: {
     name: "Montale Soleil De Capri Eau de Parfum 100ml",
