@@ -6,7 +6,7 @@ function AddProductForm(props) {
     e.preventDefault();
     const product = {
       name: nameRef.current.value,
-      price: parseFloat(priceRef.current.value),
+      price: parseFloat(priceRef.current.value || 0),
       image: imageRef.current.value,
       status: statusRef.current.value,
       desc: descRef.current.value,

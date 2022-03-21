@@ -26,6 +26,7 @@
       margin-bottom: 0.6rem;
     }
     .product__button {
+      color: #333;
       width: 50%;
       padding: 0.3rem 0;
       cursor: pointer;
@@ -34,6 +35,19 @@
       &:hover {
         background-color: rgb(87, 85, 85);
         color: #fff;
+      }
+      &:disabled {
+        cursor: default;
+        padding: 0.4rem 1rem;
+        position: relative;
+        top: -50%;
+        left: 10%;
+        transform: rotate(345deg);
+        width: 70%;
+        color: rgb(255, 0, 0);
+        font-weight: 400;
+        background-color: rgb(255, 255, 255);
+        border: 1px solid #333;
       }
     }
   }
