@@ -1,8 +1,8 @@
 .product {
   padding: 0.7rem;
   display: grid;
-  width: 100%;
   grid-template-columns: 1fr 2fr;
+  min-height: 120px;
   .product__img-container {
     width: 130px;
     height: 120px;
@@ -37,13 +37,7 @@
         color: #fff;
       }
       &:disabled {
-        cursor: default;
-        padding: 0.4rem 1rem;
-        position: relative;
-        top: -50%;
-        left: 10%;
-        transform: rotate(345deg);
-        width: 70%;
+        cursor: not-allowed;
         color: rgb(255, 0, 0);
         font-weight: 400;
         background-color: rgb(255, 255, 255);

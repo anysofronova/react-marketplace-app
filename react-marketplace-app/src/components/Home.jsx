@@ -21,10 +21,16 @@ class Home extends React.Component {
     this.setState({ products: sampleProducts });
   };
 
+  addToOrder = (key) => {
+    const order = { ...this.state.order };
+    order[key] = order[key] + 1 || 1;
+    this.setState({ order });
+  };
+
   render() {
     return (
       <div className="store__container">
-        <div className="store__header">
+        <div className="store__header store__scroll">
           <Header title="Anna Sofronova" subTitle="From Russia with Love" />
           <ul className="pruducts">
             {Object.keys(this.state.products).map((key) => {
@@ -32,16 +38,17 @@ class Home extends React.Component {
                 <Product
                   key={key}
                   index={key}
+                  addToOrder={this.addToOrder}
                   details={this.state.products[key]}
                 />
               );
             })}
           </ul>
         </div>
-        <div className="store__order">
-          <Order />
+        <div className="store__order store__scroll">
+          <Order products={this.state.products} order={this.state.order} />
         </div>
-        <div className="store__ProductAdmin">
+        <div className="store__ProductAdmin store__scroll">
           <ProductAdmin
             addProduct={this.addProduct}
             loadSampleProduct={this.loadSampleProduct}
