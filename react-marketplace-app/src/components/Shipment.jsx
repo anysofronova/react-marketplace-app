@@ -4,7 +4,6 @@ import "./scss/Shipment.scss";
 function Shipment(props) {
   const { total } = props;
   const shipping = total > 0 && total < 100 ? 20 : total < 200 ? 9 : 0;
-  console.log(total);
   return (
     <div className="shipment">
       {total < 200 ? (

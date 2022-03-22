@@ -17,6 +17,12 @@ class Home extends React.Component {
     this.setState({ products });
   };
 
+  updateProduct = (key, updatedProduct) => {
+    const products = { ...this.state.products };
+    products[key] = updatedProduct;
+    this.setState({ products });
+  };
+
   loadSampleProduct = () => {
     this.setState({ products: sampleProducts });
   };
@@ -52,6 +58,8 @@ class Home extends React.Component {
           <ProductAdmin
             addProduct={this.addProduct}
             loadSampleProduct={this.loadSampleProduct}
+            products={this.state.products}
+            updateProduct={this.updateProduct}
           />
         </div>
       </div>

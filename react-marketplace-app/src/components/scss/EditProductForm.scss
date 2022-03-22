@@ -1,0 +1,35 @@
+.editform {
+  border: 1.5px solid #333;
+  margin-bottom: 1rem;
+  *::-webkit-input-placeholder {
+    color: #333;
+  }
+  * {
+    height: 30px;
+    padding: 0.2rem 0.4rem;
+    border: none;
+    border-bottom: 1px solid #333;
+    outline: none;
+    border-collapse: collapse;
+    color: #333;
+  }
+  .editform__name {
+    border-right: 1px solid #333;
+  }
+  .editform__name,
+  .editform__price {
+    width: 50%;
+    font-weight: 400;
+    font-size: 13px;
+  }
+  textarea,
+  select,
+  .editform__image {
+    width: 100%;
+    resize: none;
+    font-size: 12px;
+  }
+  textarea {
+    height: 50px;
+  }
+}
