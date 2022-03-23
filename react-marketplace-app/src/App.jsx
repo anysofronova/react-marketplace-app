@@ -10,9 +10,9 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<Landing />} />
+          <Route path="/home" element={<Landing />} />
           <Route path="/store/:storeID" element={<Home />} />
-          <Route path="*" element={<NotFound />} />
+          <Route element={<NotFound />} />
         </Routes>
       </Router>
     </>
