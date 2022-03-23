@@ -10,12 +10,21 @@
     margin-top: 2rem;
     width: 100%;
     height: 30px;
+    animation: around 3s linear alternate 6;
     cursor: pointer;
     border: 1px solid #333;
     background-color: rgb(218, 211, 211);
     &:hover {
       background-color: rgb(87, 85, 85);
       color: #fff;
+    }
+  }
+  @keyframes around {
+    0% {
+      background-color: rgb(218, 211, 211);
+    }
+    100% {
+      background-color: #96eeea;
     }
   }
 }
