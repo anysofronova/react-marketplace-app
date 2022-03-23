@@ -1,6 +1,8 @@
 import React from "react";
 import "./scss/Order.scss";
+import "./scss/animation.scss";
 import Shipment from "./Shipment";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 function Order(props) {
   const renderOrder = (key) => {
@@ -10,25 +12,37 @@ function Order(props) {
 
     if (!isAvailable) {
       return (
-        <li className="order__unavailable" key={key}>
-          Sorry, {product ? product.name : "product"} is unavailable.
-        </li>
+        <CSSTransition
+          classNames="order"
+          key={key}
+          timeout={{ enter: 500, exit: 500 }}
+        >
+          <li className="order__unavailable" key={key}>
+            Sorry, {product ? product.name : "product"} is unavailable.
+          </li>
+        </CSSTransition>
       );
     }
     return (
-      <li key={key}>
-        <span className="order__item">
-          <span className="order__item-count">{count}</span>
-          <span className="order__item-name">{product.name}</span>
-          <span className="order__item-price">{count * product.price} $</span>
-          <button
-            className="order__item-button"
-            onClick={() => props.deleteFromOrder(key)}
-          >
-            &times;
-          </button>
-        </span>
-      </li>
+      <CSSTransition
+        classNames="order"
+        key={key}
+        timeout={{ enter: 500, exit: 500 }}
+      >
+        <li key={key}>
+          <span className="order__item">
+            <span className="order__item-count">{count}</span>
+            <span className="order__item-name">{product.name}</span>
+            <span className="order__item-price">{count * product.price} $</span>
+            <button
+              className="order__item-button"
+              onClick={() => props.deleteFromOrder(key)}
+            >
+              &times;
+            </button>
+          </span>
+        </li>
+      </CSSTransition>
     );
   };
 
@@ -44,9 +58,9 @@ function Order(props) {
   return (
     <header className="order">
       <h2 className="order__title">Your order:</h2>
-      <ul className="order__list" key={"1"}>
+      <TransitionGroup component="ul" className="order__list" key={"1"}>
         {orderIds.map(renderOrder)}
-      </ul>
+      </TransitionGroup>
       {total > 0 ? (
         <Shipment total={total} />
       ) : (
