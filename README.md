@@ -6,4 +6,4 @@
 
 **Demo:** https://anysofronova.github.io/react-marketplace-app/#/  
 
-![](https://i.postimg.cc/tT38GBZ7/2022-03-23-11-37-56.png)
+[![v2.gif](https://s1.gifyu.com/images/v2.gif)](https://gifyu.com/image/Sp927)
