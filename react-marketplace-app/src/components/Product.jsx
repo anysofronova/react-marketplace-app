@@ -1,5 +1,6 @@
 import React from "react";
 import "./scss/Product.scss";
+import PropTypes from "prop-types";
 
 function Product(props) {
   const { image, name, desc, price, status } = props.details;
@@ -27,5 +28,17 @@ function Product(props) {
     </li>
   );
 }
+
+Product.propTypes = {
+  details: PropTypes.shape({
+    image: PropTypes.string,
+    name: PropTypes.string,
+    desc: PropTypes.string,
+    price: PropTypes.number,
+    status: PropTypes.string,
+  }),
+  index: PropTypes.string,
+  addToOrder: PropTypes.func,
+};
 
 export default Product;

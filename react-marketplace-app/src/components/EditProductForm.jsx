@@ -1,12 +1,16 @@
 import React from "react";
 import "./scss/EditProductForm.scss";
+import PropTypes from "prop-types";
 
 function EditProductForm(props) {
   const { name, price, status, desc, image } = props.product;
   const handleChange = (e) => {
     const updatedProduct = {
       ...props.product,
-      [e.currentTarget.name]: e.currentTarget.value,
+      [e.currentTarget.name]:
+        e.currentTarget.name === "price"
+          ? parseFloat(e.currentTarget.value)
+          : e.currentTarget.value,
     };
     props.updateProduct(props.index, updatedProduct);
   };
@@ -58,5 +62,18 @@ function EditProductForm(props) {
     </div>
   );
 }
+
+EditProductForm.propTypes = {
+  product: PropTypes.shape({
+    image: PropTypes.string,
+    name: PropTypes.string,
+    desc: PropTypes.string,
+    price: PropTypes.number,
+    status: PropTypes.string,
+  }),
+  index: PropTypes.string,
+  deleteProduct: PropTypes.func,
+  updateProduct: PropTypes.func,
+};
 
 export default EditProductForm;

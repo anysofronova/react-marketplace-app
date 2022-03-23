@@ -2,6 +2,7 @@ import React from "react";
 import "./scss/Order.scss";
 import "./scss/animation.scss";
 import Shipment from "./Shipment";
+import PropTypes from "prop-types";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 function Order(props) {
@@ -69,5 +70,11 @@ function Order(props) {
     </header>
   );
 }
+
+Order.propTypes = {
+  product: PropTypes.object,
+  order: PropTypes.object,
+  deleteFromOrder: PropTypes.func,
+};
 
 export default Order;

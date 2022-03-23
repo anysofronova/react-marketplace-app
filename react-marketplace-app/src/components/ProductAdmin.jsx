@@ -1,6 +1,7 @@
 import React from "react";
 import AddProductForm from "./AddProductForm";
 import "./scss/ProductAdmin.scss";
+import PropTypes from "prop-types";
 import EditProductForm from "./EditProductForm";
 
 function ProductAdmin(props) {
@@ -30,5 +31,13 @@ function ProductAdmin(props) {
     </header>
   );
 }
+
+ProductAdmin.propTypes = {
+  products: PropTypes.object,
+  loadSampleProduct: PropTypes.func,
+  updateProduct: PropTypes.func,
+  deleteProduct: PropTypes.func,
+  addProduct: PropTypes.func,
+};
 
 export default ProductAdmin;

@@ -1,5 +1,6 @@
 import React from "react";
 import "./scss/AddProductForm.scss";
+import PropTypes from "prop-types";
 
 function AddProductForm(props) {
   const createProduct = (e) => {
@@ -56,5 +57,9 @@ function AddProductForm(props) {
     </form>
   );
 }
+
+AddProductForm.propTypes = {
+  addProduct: PropTypes.func,
+};
 
 export default AddProductForm;
