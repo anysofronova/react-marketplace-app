@@ -50,7 +50,7 @@ class Home extends React.Component {
     return (
       <div className="store__container">
         <div className="store__header store__scroll">
-          <Header title="Anna Sofronova" subTitle="From Russia with Love" />
+          <Header title="Anna Sofronova" />
           <ul className="pruducts">
             {Object.keys(this.state.products).map((key) => {
               return (

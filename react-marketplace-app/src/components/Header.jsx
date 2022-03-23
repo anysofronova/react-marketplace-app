@@ -8,9 +8,6 @@ function Header(props) {
       <div className="header__content">
         <div className="header__divider"></div>
         <h1>{props.title}</h1>
-        <h3>
-          <span>{props.subTitle}</span>
-        </h3>
       </div>
     </header>
   );
@@ -18,7 +15,6 @@ function Header(props) {
 
 Header.propTypes = {
   title: PropTypes.string.isRequired,
-  subTitle: PropTypes.string.isRequired,
 };
 
 export default Header;
