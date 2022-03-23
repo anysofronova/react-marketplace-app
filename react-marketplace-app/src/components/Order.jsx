@@ -10,7 +10,7 @@ function Order(props) {
 
     if (!isAvailable) {
       return (
-        <li className="order__unavailable">
+        <li className="order__unavailable" key={key}>
           Sorry, {product ? product.name : "product"} is unavailable.
         </li>
       );
@@ -21,7 +21,12 @@ function Order(props) {
           <span className="order__item-count">{count}</span>
           <span className="order__item-name">{product.name}</span>
           <span className="order__item-price">{count * product.price} $</span>
-          <button className="order__item-button">&times;</button>
+          <button
+            className="order__item-button"
+            onClick={() => props.deleteFromOrder(key)}
+          >
+            &times;
+          </button>
         </span>
       </li>
     );
@@ -39,7 +44,9 @@ function Order(props) {
   return (
     <header className="order">
       <h2 className="order__title">Your order:</h2>
-      <ul className="order__list">{orderIds.map(renderOrder)}</ul>
+      <ul className="order__list" key={"1"}>
+        {orderIds.map(renderOrder)}
+      </ul>
       {total > 0 ? (
         <Shipment total={total} />
       ) : (

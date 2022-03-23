@@ -23,6 +23,12 @@ class Home extends React.Component {
     this.setState({ products });
   };
 
+  deleteProduct = (key) => {
+    const products = { ...this.state.products };
+    delete products[key];
+    this.setState({ products });
+  };
+
   loadSampleProduct = () => {
     this.setState({ products: sampleProducts });
   };
@@ -30,6 +36,13 @@ class Home extends React.Component {
   addToOrder = (key) => {
     const order = { ...this.state.order };
     order[key] = order[key] + 1 || 1;
+    this.setState({ order });
+  };
+
+  deleteFromOrder = (key) => {
+    const order = { ...this.state.order };
+    order[key]--;
+    if (order[key] <= 0) delete order[key];
     this.setState({ order });
   };
 
@@ -52,7 +65,11 @@ class Home extends React.Component {
           </ul>
         </div>
         <div className="store__order store__scroll">
-          <Order products={this.state.products} order={this.state.order} />
+          <Order
+            products={this.state.products}
+            order={this.state.order}
+            deleteFromOrder={this.deleteFromOrder}
+          />
         </div>
         <div className="store__ProductAdmin store__scroll">
           <ProductAdmin
@@ -60,6 +77,7 @@ class Home extends React.Component {
             loadSampleProduct={this.loadSampleProduct}
             products={this.state.products}
             updateProduct={this.updateProduct}
+            deleteProduct={this.deleteProduct}
           />
         </div>
       </div>

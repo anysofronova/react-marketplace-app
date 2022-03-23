@@ -49,6 +49,12 @@ function EditProductForm(props) {
         value={image}
         onChange={handleChange}
       />
+      <button
+        onClick={() => props.deleteProduct(props.index)}
+        className="editform__button"
+      >
+        Delete
+      </button>
     </div>
   );
 }

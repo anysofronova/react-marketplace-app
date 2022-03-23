@@ -15,6 +15,7 @@ function ProductAdmin(props) {
               index={key}
               product={props.products[key]}
               updateProduct={props.updateProduct}
+              deleteProduct={props.deleteProduct}
             />
           );
         })}

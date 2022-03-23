@@ -32,4 +32,14 @@
   textarea {
     height: 50px;
   }
+  .editform__button {
+    width: 100%;
+    cursor: pointer;
+    background-color: rgb(218, 211, 211);
+    border: none;
+    &:hover {
+      background-color: rgb(87, 85, 85);
+      color: #fff;
+    }
+  }
 }
