@@ -1,0 +1,15 @@
+.order-enter {
+  transition: 500ms;
+  transform: translateX(-10%);
+  &.order-enter-active {
+    transform: translateX(0);
+  }
+}
+.order-exit {
+  transition: 500ms;
+  transform: translateX(0%);
+  &.order-exit-active {
+    transform: translateX(15%);
+    padding: 0;
+  }
+}

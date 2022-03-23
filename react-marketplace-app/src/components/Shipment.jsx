@@ -1,5 +1,6 @@
 import React from "react";
 import "./scss/Shipment.scss";
+import PropTypes from "prop-types";
 
 function Shipment(props) {
   const { total } = props;
@@ -21,5 +22,9 @@ function Shipment(props) {
     </div>
   );
 }
+
+Shipment.propTypes = {
+  total: PropTypes.number,
+};
 
 export default Shipment;
