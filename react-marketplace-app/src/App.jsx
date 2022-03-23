@@ -10,7 +10,7 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path="/home" element={<Landing />} />
+          <Route path="/" element={<Landing />} />
           <Route path="/store/:storeID" element={<Home />} />
           {/* <Route element={<NotFound />} /> */}
         </Routes>
