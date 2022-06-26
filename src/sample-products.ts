@@ -1,0 +1,78 @@
+import { IProduct } from "./@types/IProduct";
+
+const sampleProducts: IProduct[] = [
+  {
+    id: 0,
+    name: "FURLA Magnifica 100ml",
+    image: require("./img/product1.jpeg"),
+    desc: "Magnifica – a joyful shower of mandarin, blue lavender, and juicy peach sensually enlace with a precious rose.",
+    price: 76,
+    status: "available",
+    count: 0,
+  },
+  {
+    id: 1,
+    name: "Jimmy Choo Illicit Flower 100ml",
+    image: require("./img/product2.jpeg"),
+    desc: "Illicit Flower is created for a graceful woman, unafraid to toy with the rules.",
+    price: 59,
+    status: "unavailable",
+    count: 0,
+  },
+  {
+    id: 2,
+    name: "Montale Soleil De Capri 100ml",
+    image: require("./img/product3.jpeg"),
+    desc: "An invigorating harmony of Citrus Fruits from Italy, Grapefruit.",
+    price: 94,
+    status: "available",
+    count: 0,
+  },
+  {
+    id: 3,
+    name: "Narciso Rodriguez 90ml",
+    image: require("./img/product4.jpeg"),
+    desc: "For her Eau de Parfum maintains musk as its heart note, just like the other for her perfumes.",
+    price: 135,
+    status: "available",
+    count: 0,
+  },
+  {
+    id: 4,
+    name: "Chloe Signature EDT 75ml",
+    image: require("./img/product5.jpeg"),
+    desc: "Chloe Parfum is a gift that she will always remember and one that will cause her to think of the giver fondly for years to come.",
+    price: 51,
+    status: "available",
+    count: 0,
+  },
+  {
+    id: 5,
+    name: "Jean Patou Joy Forever 50 ml",
+    image: require("./img/product6.jpeg"),
+    desc: "Sparkling top notes, lush floral mid notes and a luxurious woody base capture the timeless spirit of JOY.",
+    price: 110,
+    status: "available",
+    count: 0,
+  },
+  {
+    id: 6,
+    name: "Versace - Versense 100ml",
+    image: require("./img/product7.jpeg"),
+    desc: "The House of Versace is a well known designer brand that always creates only the most exceptional pieces for men and women alike.",
+    price: 78,
+    status: "available",
+    count: 0,
+  },
+  {
+    id: 7,
+    name: "BURBERRY London 100ml",
+    image: require("./img/product8.jpeg"),
+    desc: "This fragrance is a floral fresh perfume with gentle top notes of rose and honeysuckle and a deep heart of tiare flower, jasmine, and peony. ",
+    price: 102,
+    status: "available",
+    count: 0,
+  },
+];
+
+export default sampleProducts;

@@ -1,0 +1,61 @@
+.product {
+  padding: 0.7rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  min-height: 120px;
+  .img {
+    width: 130px;
+    height: 120px;
+    margin-right: 1rem;
+    img {
+      width: 100%;
+    }
+  }
+  .details {
+    font-size: 14px;
+    .name {
+      font-weight: 500;
+      margin-bottom: 0.4rem;
+    }
+    .price {
+      margin-bottom: 0.4rem;
+      font-weight: 500;
+    }
+    .desc {
+      font-size: 12px;
+      margin-bottom: 0.6rem;
+    }
+    .button {
+      color: var(--color-white);
+      width: 50%;
+      padding: 0.3rem 0;
+      cursor: pointer;
+      border: none;
+      background-color: var(--color-primary);
+      &:hover {
+        background-color: var(--color-grey);
+      }
+      &:disabled {
+        cursor: not-allowed;
+        color: var(--color-red);
+        font-weight: 400;
+        background-color: var(--color-white);
+        border: 1px solid #333;
+        &:hover {
+          color: var(--color-red);
+          background-color: var(--color-white);
+        }
+      }
+    }
+  }
+}
+
+// ========== Media Queries ==========
+@media screen and (max-width: 900px) {
+  .product {
+    .details {
+      .button {
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.editForm {
+  border: 1.5px solid #333;
+  margin-bottom: 1rem;
+  *::-webkit-input-placeholder {
+    color: var(--color-grey) !important;
+  }
+  * {
+    height: 30px;
+    padding: 0.2rem 0.4rem;
+    border: none;
+    border-bottom: 1px solid var(--color-grey);
+    outline: none;
+    border-collapse: collapse;
+    color: var(--color-grey);
+  }
+  .name {
+    border-right: 1px solid var(--color-grey);
+  }
+  .name,
+  .price {
+    width: 50%;
+    font-weight: 400;
+    font-size: 13px;
+  }
+  textarea,
+  select,
+  .image {
+    width: 100%;
+    resize: none;
+    font-size: 12px;
+  }
+  textarea {
+    height: 50px;
+  }
+  .button {
+    width: 100%;
+    cursor: pointer;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    &:hover {
+      background-color: var(--color-grey);
+    }
+  }
+}
