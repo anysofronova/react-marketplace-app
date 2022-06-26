@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto:wght@300;500&display=swap");
+
+:root {
+  --color-text: black;
+  --color-white: white;
+  --color-red: #b00000;
+  --color-grey: #333;
+  --color-primary: #94505c;
+  --transition: all 400ms ease;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  color: var(--color-text);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.header {
+  display: none;
+}
+// ========== Media Queries ==========
+@media screen and (max-width: 900px) {
+  .header {
+    display: block;
+  }
+}

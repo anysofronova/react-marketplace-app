@@ -1,0 +1,17 @@
+.shipment {
+  .delivery {
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+  }
+  .discount {
+    font-size: 12px;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  .total {
+    border-top: 2px solid #333;
+    padding: 2rem 1rem;
+    font-weight: 500;
+    text-align: end;
+  }
+}
