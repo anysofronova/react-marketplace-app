@@ -1,9 +1,11 @@
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import styles from "./Order.module.scss";
 import Shipment from "./Shipment/Shipment";
 import { useAppDispatch, useAppSelector } from "../../hooks/redux";
 import { deleteItemFromCart } from "../../store/slices/mainSlice";
 import { CartItemType } from "../../@types/CartItemType";
+import { useNavigate } from "react-router-dom";
+import useWidth from "../../hooks/useWidth";
 
 const Order: FC = () => {
   const cart = useAppSelector((state) => state.mainSlice.cartList);
@@ -11,6 +13,13 @@ const Order: FC = () => {
   const totalCount = useAppSelector((state) => state.mainSlice.totalCount);
   const products = useAppSelector((state) => state.mainSlice.productList);
   const dispatch = useAppDispatch();
+  const navigate = useNavigate();
+  const width = useWidth();
+  useEffect(() => {
+    if (width > 900) {
+      navigate("/");
+    }
+  }, [width, navigate]);
   const renderOrder = (item: CartItemType) => {
     const orderItem = products.find((i) => i.id === item.id);
     if (orderItem?.status !== "available") {
