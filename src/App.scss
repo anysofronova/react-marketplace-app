@@ -20,26 +20,30 @@
   padding: 0;
 }
 
-img {
-  max-width: 100%;
-}
-
 body {
   color: var(--color-text);
-}
+  img {
+    max-width: 100%;
+  }
+  h2 {
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  li {
+    list-style: none;
+  }
 
-li {
-  list-style: none;
+  a {
+    color: var(--color-text);
+    text-decoration: none;
+  }
 }
-
-a {
-  color: var(--color-text);
-  text-decoration: none;
-}
-
 .header {
   display: none;
 }
+
 // ========== Media Queries ==========
 @media screen and (max-width: 900px) {
   .header {
