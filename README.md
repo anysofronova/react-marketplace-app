@@ -8,4 +8,4 @@
 </div>  
 
 **Demo:** https://anysofronova.github.io/react-marketplace-app/#/  
-<div><img src="https://s1.gifyu.com/images/v2.gif"></div>  
+<div><img src="https://i.ibb.co/P6W91pz/2022-07-04-12-12-02.png"></div>  
