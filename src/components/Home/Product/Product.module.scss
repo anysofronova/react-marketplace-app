@@ -3,6 +3,7 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
   min-height: 120px;
+  max-width: 100%;
   .img {
     width: 130px;
     height: 120px;
@@ -16,6 +17,7 @@
     .name {
       font-weight: 500;
       margin-bottom: 0.4rem;
+      max-width: 100%;
     }
     .price {
       margin-bottom: 0.4rem;

@@ -13,10 +13,12 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 0.2rem;
       .count {
         font-weight: 500;
       }
       .name {
+        flex: 1;
         max-width: 60%;
       }
       .price {
@@ -28,6 +30,7 @@
         outline: none;
         border: none;
         background-color: var(--color-white);
+        cursor: pointer;
       }
     }
   }

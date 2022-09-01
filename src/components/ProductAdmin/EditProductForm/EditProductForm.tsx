@@ -27,6 +27,7 @@ const EditProductForm: FC<IProduct> = ({
       />
       <input
         type="text"
+        pattern={"[0-9]*.?[0-9]*"}
         className={styles.price}
         value={price}
         onChange={(e) =>
