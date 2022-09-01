@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-marketplace-app/static/css/main.74c9acdf.css",
-    "main.js": "/react-marketplace-app/static/js/main.fd6eb33f.js",
+    "main.css": "/react-marketplace-app/static/css/main.8ba0b20b.css",
+    "main.js": "/react-marketplace-app/static/js/main.30533eba.js",
     "static/media/product7.jpeg": "/react-marketplace-app/static/media/product7.ad49d41b5bc4863c5ff6.jpeg",
     "static/media/product8.jpeg": "/react-marketplace-app/static/media/product8.b45d2d682d9fcca880cc.jpeg",
     "static/media/product4.jpeg": "/react-marketplace-app/static/media/product4.df9fd0965acc4e56229b.jpeg",
@@ -11,11 +11,11 @@
     "static/media/product6.jpeg": "/react-marketplace-app/static/media/product6.ef1b51b23ae747304cda.jpeg",
     "static/media/imgPlaceholder.jpeg": "/react-marketplace-app/static/media/imgPlaceholder.0692b4324e7d4d80c543.jpeg",
     "index.html": "/react-marketplace-app/index.html",
-    "main.74c9acdf.css.map": "/react-marketplace-app/static/css/main.74c9acdf.css.map",
-    "main.fd6eb33f.js.map": "/react-marketplace-app/static/js/main.fd6eb33f.js.map"
+    "main.8ba0b20b.css.map": "/react-marketplace-app/static/css/main.8ba0b20b.css.map",
+    "main.30533eba.js.map": "/react-marketplace-app/static/js/main.30533eba.js.map"
   },
   "entrypoints": [
-    "static/css/main.74c9acdf.css",
-    "static/js/main.fd6eb33f.js"
+    "static/css/main.8ba0b20b.css",
+    "static/js/main.30533eba.js"
   ]
 }
