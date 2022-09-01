@@ -24,11 +24,19 @@ const Order: FC = () => {
     const orderItem = products.find((i) => i.id === item.id);
     if (orderItem?.status !== "available") {
       return (
-        <div className={styles.order}>
-          <li key={orderItem?.id}>
-            Sorry, {orderItem?.name || "this product"} is unavailable.
-          </li>
-        </div>
+        <li className={styles.order} key={orderItem?.id}>
+          <span className={styles.item}>
+            <span className={styles.name}>
+              Sorry, {orderItem?.name || "this product"} is unavailable.
+            </span>
+            <button
+              className={styles.button}
+              onClick={() => dispatch(deleteItemFromCart(item.id))}
+            >
+              &times;
+            </button>
+          </span>
+        </li>
       );
     }
     return (
